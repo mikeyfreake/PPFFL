@@ -1,0 +1,14 @@
+version: '2'
+services:
+    scraper-app:
+        image: scraper
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://scraper-postgresql:5432/scraper
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    scraper-postgresql:
+        extends:
+            file: postgresql.yml
+            service: scraper-postgresql
