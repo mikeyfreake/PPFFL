@@ -1,0 +1,10 @@
+{
+    "scraperApp": {
+        "FantasyProvider" : {
+            "null": "",
+            "ESPN": "ESPN",
+            "NFL": "NFL",
+            "YAHOO": "YAHOO"
+        }
+    }
+}

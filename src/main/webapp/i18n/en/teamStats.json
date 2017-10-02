@@ -1,0 +1,31 @@
+{
+    "scraperApp": {
+        "teamStats" : {
+            "home": {
+                "title": "Team Stats",
+                "createLabel": "Create a new Team Stats",
+                "createOrEditLabel": "Create or edit a Team Stats"
+            },
+            "created": "A new Team Stats is created with identifier {{ param }}",
+            "updated": "A Team Stats is updated with identifier {{ param }}",
+            "deleted": "A Team Stats is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Team Stats {{ id }}?"
+            },
+            "detail": {
+                "title": "Team Stats"
+            },
+            "rank": "Rank",
+            "wins": "Wins",
+            "losses": "Losses",
+            "ties": "Ties",
+            "pointsFor": "Points For",
+            "pointsAgainst": "Points Against",
+            "pointsForPerGame": "Points For Per Game",
+            "pointsAgainstPerGame": "Points Against Per Game",
+            "pointsDiffPerGame": "Points Diff Per Game",
+            "team": "Team",
+            "season": "Season"
+        }
+    }
+}

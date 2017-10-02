@@ -1,0 +1,69 @@
+
+<div *ngIf="teamStats">
+    <h2><span jhiTranslate="scraperApp.teamStats.detail.title">Team Stats</span> {{teamStats.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="scraperApp.teamStats.rank">Rank</span></dt>
+        <dd>
+            <span>{{teamStats.rank}}</span>
+        </dd>
+        <dt><span jhiTranslate="scraperApp.teamStats.wins">Wins</span></dt>
+        <dd>
+            <span>{{teamStats.wins}}</span>
+        </dd>
+        <dt><span jhiTranslate="scraperApp.teamStats.losses">Losses</span></dt>
+        <dd>
+            <span>{{teamStats.losses}}</span>
+        </dd>
+        <dt><span jhiTranslate="scraperApp.teamStats.ties">Ties</span></dt>
+        <dd>
+            <span>{{teamStats.ties}}</span>
+        </dd>
+        <dt><span jhiTranslate="scraperApp.teamStats.pointsFor">Points For</span></dt>
+        <dd>
+            <span>{{teamStats.pointsFor}}</span>
+        </dd>
+        <dt><span jhiTranslate="scraperApp.teamStats.pointsAgainst">Points Against</span></dt>
+        <dd>
+            <span>{{teamStats.pointsAgainst}}</span>
+        </dd>
+        <dt><span jhiTranslate="scraperApp.teamStats.pointsForPerGame">Points For Per Game</span></dt>
+        <dd>
+            <span>{{teamStats.pointsForPerGame}}</span>
+        </dd>
+        <dt><span jhiTranslate="scraperApp.teamStats.pointsAgainstPerGame">Points Against Per Game</span></dt>
+        <dd>
+            <span>{{teamStats.pointsAgainstPerGame}}</span>
+        </dd>
+        <dt><span jhiTranslate="scraperApp.teamStats.pointsDiffPerGame">Points Diff Per Game</span></dt>
+        <dd>
+            <span>{{teamStats.pointsDiffPerGame}}</span>
+        </dd>
+        <dt><span jhiTranslate="scraperApp.teamStats.team">Team</span></dt>
+        <dd>
+            <div *ngIf="teamStats.teamId">
+                <a [routerLink]="['/team', teamStats.teamId]">{{teamStats.teamId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="scraperApp.teamStats.season">Season</span></dt>
+        <dd>
+            <div *ngIf="teamStats.seasonId">
+                <a [routerLink]="['/season', teamStats.seasonId]">{{teamStats.seasonYear}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'team-stats/'+ teamStats.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

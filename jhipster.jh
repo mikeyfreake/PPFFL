@@ -1,0 +1,38 @@
+entity League {
+	id Integer required,
+    name String required maxlength(255),
+    importedFrom FantasyProvider,
+    constitution String maxlength(8000)
+}
+entity Season {
+	year Integer required,
+}
+entity Team {
+	id Integer required,
+	name String required maxlength(255),
+    owner String maxlength(255)
+}
+entity TeamStats {
+	rank Integer,
+    wins Integer,
+    losses Integer,
+    ties Integer,
+    pointsFor Double,
+    pointsAgainst Double,
+    pointsForPerGame Double,
+    pointsAgainstPerGame Double,
+    pointsDiffPerGame Double
+}
+relationship OneToMany {
+    League{season(year)} to Season{league(name)}
+}
+relationship OneToMany {
+	Season{teamStats} to TeamStats{season(year)}
+}
+relationship ManyToOne{
+	TeamStats{team} to Team{teamStats}
+}
+enum FantasyProvider {
+	ESPN, NFL, YAHOO
+}
+dto * with mapstruct

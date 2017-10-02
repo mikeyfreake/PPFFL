@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "teamStats",
+            "otherEntityName": "teamStats",
+            "otherEntityRelationshipName": "team"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "owner",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        }
+    ],
+    "changelogDate": "20171001194336",
+    "entityTableName": "team",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no"
+}

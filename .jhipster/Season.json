@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "teamStats",
+            "otherEntityName": "teamStats",
+            "otherEntityRelationshipName": "season"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "league",
+            "otherEntityName": "league",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "year",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20171001194335",
+    "entityTableName": "season",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no"
+}

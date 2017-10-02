@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "season",
+            "otherEntityName": "season",
+            "otherEntityRelationshipName": "league"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "importedFrom",
+            "fieldType": "FantasyProvider",
+            "fieldValues": "ESPN,NFL,YAHOO"
+        },
+        {
+            "fieldName": "constitution",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 8000
+        }
+    ],
+    "changelogDate": "20171001194334",
+    "entityTableName": "league",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no"
+}

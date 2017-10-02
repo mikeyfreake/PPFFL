@@ -1,0 +1,60 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "team",
+            "otherEntityName": "team",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "season",
+            "otherEntityName": "season",
+            "otherEntityField": "year"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "rank",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "wins",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "losses",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ties",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pointsFor",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "pointsAgainst",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "pointsForPerGame",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "pointsAgainstPerGame",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "pointsDiffPerGame",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20171001194337",
+    "entityTableName": "team_stats",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no"
+}
