@@ -1,9 +1,10 @@
 package com.ppffl.service.mapper;
 
-import com.ppffl.domain.*;
-import com.ppffl.service.dto.SeasonDTO;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
-import org.mapstruct.*;
+import com.ppffl.domain.Season;
+import com.ppffl.service.dto.SeasonDTO;
 
 /**
  * Mapper for the entity Season and its DTO SeasonDTO.

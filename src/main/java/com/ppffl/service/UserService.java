@@ -1,14 +1,12 @@
 package com.ppffl.service;
 
-import com.ppffl.domain.Authority;
-import com.ppffl.domain.User;
-import com.ppffl.repository.AuthorityRepository;
-import com.ppffl.config.Constants;
-import com.ppffl.repository.UserRepository;
-import com.ppffl.security.AuthoritiesConstants;
-import com.ppffl.security.SecurityUtils;
-import com.ppffl.service.util.RandomUtil;
-import com.ppffl.service.dto.UserDTO;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,10 +18,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.*;
-import java.util.stream.Collectors;
+import com.ppffl.config.Constants;
+import com.ppffl.domain.Authority;
+import com.ppffl.domain.User;
+import com.ppffl.repository.AuthorityRepository;
+import com.ppffl.repository.UserRepository;
+import com.ppffl.security.AuthoritiesConstants;
+import com.ppffl.security.SecurityUtils;
+import com.ppffl.service.dto.UserDTO;
+import com.ppffl.service.util.RandomUtil;
 
 /**
  * Service class for managing users.

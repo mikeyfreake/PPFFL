@@ -1,9 +1,6 @@
 package com.ppffl.config;
 
-import com.ppffl.security.*;
-import com.ppffl.security.jwt.*;
-
-import io.github.jhipster.security.*;
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.BeanInitializationException;
 import org.springframework.context.annotation.Bean;
@@ -20,10 +17,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.data.repository.query.SecurityEvaluationContextExtension;
-import org.springframework.web.filter.CorsFilter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.filter.CorsFilter;
 
-import javax.annotation.PostConstruct;
+import com.ppffl.security.AuthoritiesConstants;
+import com.ppffl.security.jwt.JWTConfigurer;
+import com.ppffl.security.jwt.TokenProvider;
+
+import io.github.jhipster.security.Http401UnauthorizedEntryPoint;
 
 @Configuration
 @EnableWebSecurity

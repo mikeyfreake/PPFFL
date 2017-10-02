@@ -1,13 +1,15 @@
 package com.ppffl.service.mapper;
 
-import com.ppffl.domain.Authority;
-import com.ppffl.domain.User;
-import com.ppffl.service.dto.UserDTO;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import com.ppffl.domain.Authority;
+import com.ppffl.domain.User;
+import com.ppffl.service.dto.UserDTO;
 
 /**
  * Mapper for the entity User and its DTO called UserDTO.

@@ -1,9 +1,9 @@
 package com.ppffl.repository;
 
-import com.ppffl.domain.Team;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import org.springframework.data.jpa.repository.*;
+import com.ppffl.domain.Team;
 
 
 /**

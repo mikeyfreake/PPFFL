@@ -1,16 +1,9 @@
 package com.ppffl.web.rest;
 
-import com.codahale.metrics.annotation.Timed;
+import java.util.Optional;
 
-import com.ppffl.domain.User;
-import com.ppffl.repository.UserRepository;
-import com.ppffl.security.SecurityUtils;
-import com.ppffl.service.MailService;
-import com.ppffl.service.UserService;
-import com.ppffl.service.dto.UserDTO;
-import com.ppffl.web.rest.vm.KeyAndPasswordVM;
-import com.ppffl.web.rest.vm.ManagedUserVM;
-import com.ppffl.web.rest.util.HeaderUtil;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -19,11 +12,23 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-import java.util.*;
+import com.codahale.metrics.annotation.Timed;
+import com.ppffl.domain.User;
+import com.ppffl.repository.UserRepository;
+import com.ppffl.security.SecurityUtils;
+import com.ppffl.service.MailService;
+import com.ppffl.service.UserService;
+import com.ppffl.service.dto.UserDTO;
+import com.ppffl.web.rest.util.HeaderUtil;
+import com.ppffl.web.rest.vm.KeyAndPasswordVM;
+import com.ppffl.web.rest.vm.ManagedUserVM;
 
 /**
  * REST controller for managing the current user's account.

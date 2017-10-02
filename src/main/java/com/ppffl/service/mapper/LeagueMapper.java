@@ -1,9 +1,10 @@
 package com.ppffl.service.mapper;
 
-import com.ppffl.domain.*;
-import com.ppffl.service.dto.LeagueDTO;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
-import org.mapstruct.*;
+import com.ppffl.domain.League;
+import com.ppffl.service.dto.LeagueDTO;
 
 /**
  * Mapper for the entity League and its DTO LeagueDTO.

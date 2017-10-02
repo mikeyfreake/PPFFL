@@ -1,9 +1,10 @@
 package com.ppffl.service.mapper;
 
-import com.ppffl.domain.*;
-import com.ppffl.service.dto.TeamDTO;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
-import org.mapstruct.*;
+import com.ppffl.domain.Team;
+import com.ppffl.service.dto.TeamDTO;
 
 /**
  * Mapper for the entity Team and its DTO TeamDTO.

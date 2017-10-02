@@ -1,17 +1,18 @@
 package com.ppffl.service.dto;
 
-import com.ppffl.config.Constants;
+import java.time.Instant;
+import java.util.Set;
+import java.util.stream.Collectors;
 
-import com.ppffl.domain.Authority;
-import com.ppffl.domain.User;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
-import javax.validation.constraints.*;
-import java.time.Instant;
-import java.util.Set;
-import java.util.stream.Collectors;
+import com.ppffl.config.Constants;
+import com.ppffl.domain.Authority;
+import com.ppffl.domain.User;
 
 /**
  * A DTO representing a user, with his authorities.
